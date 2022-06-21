@@ -9,7 +9,7 @@ namespace Modul8Task2
     {
         static void Main(string[] args)
         {
-            string folder = @"D:\Temp";
+            string folder = @"D:\Temp";             //  отладочная информация, затереть перед сдачей
             long folderSize = 0;
 
             // Ввод и провека папки на существование
