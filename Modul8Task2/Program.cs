@@ -9,12 +9,11 @@ namespace Modul8Task2
     {
         static void Main(string[] args)
         {
-            string folder = @"D:\Temp";             //  отладочная информация, затереть перед сдачей
             long folderSize = 0;
 
             // Ввод и провека папки на существование
             Console.WriteLine("Введите директорию для расчёта занимаемого места :");
-            folder = Console.ReadLine();
+            string folder = Console.ReadLine();
 
             if (!Directory.Exists(folder))
             {
@@ -39,8 +38,6 @@ namespace Modul8Task2
             DirectoryInfo[] arrDir = dirInfo.GetDirectories();
             FileInfo[] arrFile = dirInfo.GetFiles();
 
-            //Console.WriteLine(dirInfo.FullName);      отладочная информация, затереть перед сдачей
-
             try
             {
                 // Суммируем размер файлов в директории
@@ -48,7 +45,6 @@ namespace Modul8Task2
                 {
                     folderSize = (folderSize + file.Length);
 
-                    //Console.WriteLine(file.FullName);  отладочная информация, затереть перед сдачей
                 }
 
                 // Рекурсивно проходим по всем остальним директориям
